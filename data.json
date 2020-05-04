@@ -1,0 +1,37 @@
+[{
+  "model": "booking_site.book",
+  "pk": 3,
+  "fields": {
+    "title": "本当によくわかるHTML&CSSの教科書 シンプルで、デザインの良いサイトが必ず作れる",
+    "thumbnail": "thumbnails/51z3bgzYDiL.jpg"
+  }
+}, {
+  "model": "booking_site.book",
+  "pk": 4,
+  "fields": {
+    "title": "PHPフレームワーク Laravel入門",
+    "thumbnail": "thumbnails/51M9CvLpz3L.jpg"
+  }
+}, {
+  "model": "booking_site.book",
+  "pk": 5,
+  "fields": {
+    "title": "図解まるわかり ネットワークのしくみ",
+    "thumbnail": "thumbnails/51nL66ZabuL.jpg"
+  }
+}, {
+  "model": "booking_site.book",
+  "pk": 6,
+  "fields": {
+    "title": "はじめてのカスタマージャーニーマップワークショップ(MarkeZine BOOKS) 「顧客視点」で",
+    "thumbnail": "thumbnails/517lQhRW-L.jpg"
+  }
+}, {
+  "model": "booking_site.book",
+  "pk": 7,
+  "fields": {
+    "title": "Pythonによるあたらしいデータ分析の教科書 (AI&TECHNOLOGY)",
+    "thumbnail": "thumbnails/518zTovKkwL.jpg"
+  }
+
+}]

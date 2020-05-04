@@ -1,0 +1,25 @@
+body {
+  padding-top: 90px;
+}
+
+.logo {
+  margin-right: 7px;
+  max-height: 42px;
+  display: inline-block;
+}
+
+table {
+  margin: 20px auto;
+}
+
+.tbl-r02 th {
+  background: #e9727e;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;
+}
+
+.tbl-r02 td {
+  border: solid 1px #ccc;
+  padding: 10px;
+}

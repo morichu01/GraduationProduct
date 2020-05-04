@@ -1,0 +1,66 @@
+{% extends 'booking_site/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>貸出中</h1>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col">
+      <img src="{{ book.0.img_url }}" class="img-fluid" alt="">
+    </div>
+    <div class="col">
+      <h2 class="mb-4">{{ book.0.title }}</h2>
+      <table class="tbl-r02 mb-4">
+        <tr>
+          <th>借りている人：　</th>
+          <td>{{ user.0.username }}</td>
+        </tr>
+        <tr>
+          <th>いつから：　</th>
+          <td>{{ borrow.0.start }}</td>
+        </tr>
+        <tr class="last">
+          <th>いつまで　</th>
+          <td>{{ borrow.0.end }}</td>
+        </tr>
+      </table>
+      <div>
+        {% if rating.rating_stars.0 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.1 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.2 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.3 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.4 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+  
+        <span>{{ rating.rating_value }}</span>
+      </div>
+      <a href="{% url 'booking_site:home'%}" class="btn btn-primary">戻る</a>
+    </div>
+  </div> <!-- .row -->
+  <!-- <hr class="my-4">
+  <p>みんなのコメントの要約</p>
+  {% for review in reviews %}
+  <p>{{ review }}</p>
+  {% endfor %} -->
+</div><!-- .container -->
+{% endblock content %}

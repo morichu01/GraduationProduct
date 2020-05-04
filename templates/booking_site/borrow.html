@@ -1,0 +1,54 @@
+{% extends 'booking_site/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>予約ページ</h1>
+  <hr class="my-4">
+
+  <div class="row">
+    <div class="col">
+      <img src="{{ data.img_url }}" class="img-fluid" alt="">
+    </div>
+    <div class="col">
+      <h2 class="mb-4">{{ data.title }}</h2>
+      <div>
+        {% if rating.rating_stars.0 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.1 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.2 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.3 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+        {% if rating.rating_stars.4 == 0 %}
+        <img src="{% static 'img/star/unstar.png' %}" alt="">
+        {% else %}
+        <img src="{% static 'img/star/star.png' %}" alt="">
+        {% endif %}
+
+        <span>{{ rating.rating_value }}</span>
+      </div>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">借りる</button>
+      <a href="{% url 'booking_site:home'%}" class="btn btn-primary">戻る</a>
+      </form>
+    </div>
+  </div> <!-- .row -->
+</div><!-- .container -->
+
+{% endblock content %}

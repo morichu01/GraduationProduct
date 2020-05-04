@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+  /* tablet devices */
+}
+
+@media (max-width: 992px) {
+  /* small tablet devices */
+}
+
+@media all and (max-width: 768px) {
+  /* mobile devices */
+
+  .logo {
+    max-height: 30px;
+    width: auto;
+  }
+
+  .last td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+
+  .tbl-r02 {
+    width: 80%;
+  }
+
+  .tbl-r02 th,
+  .tbl-r02 td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}
