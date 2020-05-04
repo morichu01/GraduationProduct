@@ -23,12 +23,12 @@ class Book(models.Model):
 class Book1(models.Model):
     title = models.CharField(
         verbose_name='タイトル',
-        max_length=50
+        max_length=100
     )
 
     img_url = models.CharField(
         verbose_name='画像',
-        max_length=50
+        max_length=100
     )
 
     no = models.CharField(
