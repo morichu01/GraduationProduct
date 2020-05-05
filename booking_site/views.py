@@ -136,15 +136,15 @@ def borrwDtail(request, pk):
 
     # reviews = scraping()
     # print(len(reviews))
-    url = "https://booklog.jp/item/1/" + book[0].no
-    rating = scraping(url)
+    # url = "https://booklog.jp/item/1/" + book[0].no
+    # rating = scraping(url)
     # print(rating)
 
     context = {
         'book': book,
         'borrow': borrow,
         'user': user,
-        'rating': rating,
+        # 'rating': rating,
     }
     return render(request, 'booking_site/detail.html', context)
 
